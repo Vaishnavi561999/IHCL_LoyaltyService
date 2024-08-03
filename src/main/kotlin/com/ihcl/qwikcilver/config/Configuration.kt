@@ -1,0 +1,70 @@
+package com.ihcl.qwikcilver.config
+
+import com.ihcl.qwikcilver.model.ConfigParameters
+import io.ktor.server.application.ApplicationEnvironment
+
+object Configuration {
+    lateinit var env: ConfigParameters
+
+    fun initConfig(environment: ApplicationEnvironment) {
+        env = ConfigParameters(
+            qcBaseUrl = environment.config.property("ktor.api.qcBaseUrl").getString(),
+            woohooBaseUrl = environment.config.property("ktor.api.woohooBaseUrl").getString(),
+            qcTransactionId = environment.config.property("ktor.api.qcTransactionId").getString(),
+            woohooPassword = environment.config.property("ktor.api.woohooPassword").getString(),
+            woohooUserName = environment.config.property("ktor.api.woohooUserName").getString(),
+            woohooClientId = environment.config.property("ktor.api.woohooClientId").getString(),
+            woohooClientSecret = environment.config.property("ktor.api.woohooClientSecret").getString(),
+            reloadUserName = environment.config.property("ktor.api.reloadUserName").getString(),
+            reloadPassword = environment.config.property("ktor.api.reloadPassword").getString(),
+            reloadTerminalId = environment.config.property("ktor.api.reloadTerminalId").getString(),
+            qcUserName = environment.config.property("ktor.api.qcUserName").getString(),
+            qcPassword = environment.config.property("ktor.api.qcPassword").getString(),
+            qcTerminalId = environment.config.property("ktor.api.qcTerminalId").getString(),
+            qcMerchantOutletNameToOverride = environment.config.property("ktor.api.qcMerchantOutletNameToOverride").getString(),
+            woohooCatalogue_username = environment.config.property("ktor.api.woohooCatalogue_username").getString(),
+            woohooCatalogue_password = environment.config.property("ktor.api.woohooCatalogue_password").getString(),
+            memberEnrollmentURL = environment.config.property("ktor.api.memberEnrollmentURL").getString(),
+            gravityHeaderKey = environment.config.property("ktor.api.epicureHeaderKey").getString(),
+            epicureHeaderCode = environment.config.property("ktor.api.epicureHeaderCode").getString(),
+            createMembershipPlan = environment.config.property("ktor.api.createMembershipPlan").getString(),
+            memberLookUp = environment.config.property("ktor.api.memberLookUp").getString(),
+            availPrivilege = environment.config.property("ktor.api.availPrivilege").getString(),
+            authorizationKey = environment.config.property("ktor.api.authorizationKey").getString(),
+            authorizationCode = environment.config.property("ktor.api.authorizationCode").getString(),
+            getPrivilege = environment.config.property("ktor.api.getPrivilege").getString(),
+            bitCancellationVoucher = environment.config.property("ktor.api.bitCancellationVoucher").getString(),
+            getLoyaltyPointsUrl = environment.config.property("ktor.api.getLoyaltyPointsUrl").getString(),
+            tataNeuStore_Id = environment.config.property("ktor.api.tataNeuStore_Id").getString(),
+            tataNeuClient_Id = environment.config.property("ktor.api.tataNeuClient_Id").getString(),
+            redeemNeuCoinsUrl = environment.config.property("ktor.api.redeemNeuCoinsUrl").getString(),
+            reverseNeuCoins = environment.config.property("ktor.api.reverseNeuCoins").getString(),
+            partnerId = environment.config.property("ktor.api.partnerId").getString(),
+            loyaltyTransactionHistoryURL = environment.config.property("ktor.api.loyaltyTransactionHistoryURL").getString(),
+            databaseName = environment.config.property("ktor.database.databaseName").getString(),
+            connectionString = environment.config.property("ktor.database.connectionString").getString(),
+            gravtyUserName = environment.config.property("ktor.api.gravtyUsername").getString(),
+            gravtyPassWord = environment.config.property("ktor.api.gravtyPassWord").getString(),
+            gravtyTokenURL = environment.config.property("ktor.api.gravtytokenURL").getString(),
+            memberEnrollmentLoggedIn = environment.config.property("ktor.api.memberEnrollmentLoggedIn").getString(),
+            memberLookUpValidationURL = environment.config.property("ktor.api.memberLookUpValidationURL").getString(),
+            gravtyMemberCardsURL = environment.config.property("ktor.api.epicureAddOnCardURL").getString(),
+            gravtyFetchMemberShip = environment.config.property("ktor.api.gravtyFetchMemberShip").getString(),
+            chambersHeaderKey = environment.config.property("ktor.api.chambersHeaderCode").getString(),
+            epicurePrimaryCard = environment.config.property("ktor.api.epicurePrimaryCard").getString(),
+            gravtyEpicurePassWord = environment.config.property("ktor.api.gravtyEpicurePassWord").getString(),
+            gravtyChamberPassWord = environment.config.property("ktor.api.gravtyChamberPassWord").getString(),
+            epicureProgramId = environment.config.property("ktor.api.epicureProgramId").getString(),
+            chamberProgramId = environment.config.property("ktor.api.chamberProgramId").getString(),
+            gravtySponserId = environment.config.property("ktor.api.gravtySponserId").getString(),
+            redisKey = environment.config.property("ktor.api.redisKey").getString(),
+            redisHost = environment.config.property("ktor.api.redisHost").getString(),
+            redisPort = environment.config.property("ktor.api.redisPort").getString(),
+            gcCatalogueTTL = environment.config.property("ktor.api.gcCatalogueTTL").getString(),
+            requestTimeoutMillis = environment.config.property("ktor.api.requestTimeoutMillis").getString(),
+            connectionPoolMinSize = environment.config.property("ktor.database.connectionPoolMinSize").getString(),
+            connectionPoolMaxSize = environment.config.property("ktor.database.connectionPoolMaxSize").getString(),
+            gravtyBenefitsCarousel = environment.config.property("ktor.api.gravtyBenefitsCarousel").getString(),
+        )
+    }
+}
